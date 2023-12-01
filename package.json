@@ -4,7 +4,11 @@
   "scripts": {
     "build": "PLATFORM=web vite build && PLATFORM=native vite build"
   },
-  "exports": {},
+  "exports": {
+    "react-native": "./dist/native/production/index.js",
+    "default": "./dist/web/production/index.js",
+    "types": "./dist/types/index.d.ts"
+  },
   "dependencies": {
     "react": "^18.2.0",
     "react-native": "^0.72.7",
@@ -14,6 +18,6 @@
     "@cross-platform-tools/vite-plugin": "^0.1.2",
     "@types/react": "^18.2.39",
     "@types/react-native": "^0.72.7",
-    "vite": "^4"
+    "vite": "^5"
   }
 }
